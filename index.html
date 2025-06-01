@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Portifolio | Camile </title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="perfil">
+      <img src="imagens\perfil.jpg" alt="perfil" class="img-perfil">
+      <h3 class="texto-perfil"> Camile Cristina </h3>
+      <h5 class="sub-perfil"> Estudante Front-End </h5>
+    </div>
+
+    <div class="redes-sociais">
+      <ul class="lista-redes-sociais">
+        <li>
+          <a href="https://github.com/MileeMouse" target="_blank">
+            <img
+              src="data:image/png;base64,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"
+              alt="github">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/camile-cristina-rosa-71a08731a/" target="_blank">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC10lEQVR4nO2ZTWgTQRTH/7ON0Wx69KO1HgK1jbWxtkWtFXqwHgSPHupRBD3Ys+ag3oqKuYm0WlSICB7qB7Z2c1AQhIrdFZQmq2etFIq0h/Zc+mTibpgk29rNZncT2QePfOzszP/35s3s8BYILLDAAqt12wlgDMAvAGsAyGVfAzAP4AGAmFPxJwEseiCaNvBVAKecRN5P8WT4bwC7KwG4L3Ty05iNBrhvDQAGAPwQxucpbNvmhQ64eK9tsCSAtk1csIXIz2Vm9+UU9Xkuo63qGY3c8uz0LDHG8uNLTFqfez0Ttwsg5qEgXlt2U7guuAnAPTutLvPxHQHwyPOO36Yn6Xj3UYrsiFB/zzF692TKdYCcolJO0SacARhpw8WL1/t7+rwCWHEEYHYsR+QigGhE9gRAz2hERMwxAE8bP2ZArxYAXwNcNJ+JE719nq0BvVoAXjlzCLBk3LxUrwCnATwzPosAEu0Hi9ZAVzxBm137MjlDN4aTdPhAIr/1cuffrw9fpa9TH10DKDOzY6tD12bX2mL7NzysdbTG6f1TpbYB/uUdrXHLmXAKcATAXePTVQAAdO3ylaoDLBg3LzgFaGnaS49vj9HnVx/o0a1RatnTXNamS1hHrm+jdgG4eFEYhyhtI1s8zcPbwvlroVDIX4DS/Oa/rdrlDJGmXzp3gbaHw3Rx6HzhP18ArHaYrQDoFh4A6MEMaFtOoVRyhHo7u+lOcqQ+U6hRjpbtUHUFwGrlOVBzAAmbp1ErgNJ2h+Kd3j2JvXLmEKCssOWl+KxY2JKkigDE0uKA1wDp1Hgh+s27mirahXh93uyEF1oHeVS8iHw6NV50Yh06c7YigJhRnyc/vVGO5qsglQDAeLmw6Kf4hzfvFcTbrcyJLzpG+ZpgjK27LVpiUj7nedqIkf/r6gs4se+K2u5ldVoXnI/77c2nNjg1o8Q+4fb7Ad0UzsdR1JdVER9YYP+h/QG0bFIMMy/YXQAAAABJRU5ErkJggg=="
+              alt="linkedin">
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="linguagens">
+      <h3 class="titulo-ling"> Idiomas </h3>
+
+      <div class="linha-barra">
+        <span class="idioma"> Português </span>
+
+        <div class="progresso">
+          <div class="nivel" style="width: 100%"></div>
+        </div>
+
+        <span class="porcentagem"> Nativo 100% </span>
+
+      </div>
+
+      <div class="linha-barra">
+        <span class="idioma"> Inglês </span>
+
+        <div class="progresso">
+          <div class="nivel" style="width: 20%"></div>
+        </div>
+
+        <span class="porcentagem"> Aprendiz 20%</span>
+      </div>
+    </div>
+
+    <div class="habilidades">
+      <h3 class="titulo-hab"> Hard Skills </h3>
+
+      <div class="linha-barra">
+        <span class="hab">HTML</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 98%"></div>
+        </div>
+        <span class="porcentagem"> 98%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">CSS</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 90%"></div>
+        </div>
+        <span class="porcentagem"> 90%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">JavaScript</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 30%"></div>
+        </div>
+        <span class="porcentagem"> 30%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Git</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 35%"></div>
+        </div>
+        <span class="porcentagem"> 35%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">React</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 0%"></div>
+        </div>
+        <span class="porcentagem"> 0%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Node.js</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 0%"></div>
+        </div>
+        <span class="porcentagem"> 0%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Tailwind</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 5%"></div>
+        </div>
+        <span class="porcentagem"> 0%</span>
+      </div>
+    </div>
+
+    <div class="habilidades">
+      <h3 class="titulo-hab"> Soft Skills </h3>
+
+      <div class="linha-barra">
+        <span class="hab">Proatividade</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 100%"></div>
+        </div>
+        <span class="porcentagem"> 100%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Resiliência</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 98%"></div>
+        </div>
+        <span class="porcentagem"> 98%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Trabalho em equipe</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 80%"></div>
+        </div>
+        <span class="porcentagem"> 80%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Organização</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 100%"></div>
+        </div>
+        <span class="porcentagem"> 100%</span>
+      </div>
+
+      <div class="linha-barra">
+        <span class="hab">Multitarefas</span>
+        <div class="progresso">
+          <div class="nivel" style="width: 90%"></div>
+        </div>
+        <span class="porcentagem"> 90%</span>
+      </div>
+
+      <div class="curriculo">
+        <button>
+          <a href="Curriculo Camile.docx.pdf" target="_blank">DOWNLOAD CV</a>
+        </button>
+      </div>
+  </header>
+
+  <nav class="navegacao">
+    <div class="menu">
+      <ul class="menu-lista">
+        <li>
+          <a href="#sobre-mim">
+            <img
+              src="data:image/png;base64,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"
+              alt="circled-chevron-up">
+          </a>
+        </li>
+        <li>
+          <a href="#Educacao">
+            <img
+              src="data:image/png;base64,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"
+              alt="education">
+          </a>
+        </li>
+        <li>
+          <a href="#Historico de trabalho">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABqklEQVR4nO2Z307CMBTGZ7zHB/FJ1PmiXrgY7gxS8UoZAV2r6GhvNLY3xHtNtKbDYUNamH/Ws0K/5MtYs5Lz607PlrMoCgoKCvJaLBMHjIiUYfHKiJCVPLs2VXNhg8fisHLQNmeAEMUq/hGAEtGHA9DSJs+nrcrzBi87ejpFUNJX0uXc9Qdgv6ksdRl/VSwsYneVpT6Y2EllqdFpbZWlLuX5tEUx/yjTSUq51fzqsKA5ABFy/QEo5u/qQnXUx8+S4X43GT2h5Fq6NtMWVZ2rOM6Pb/bMAIS3CwDC2/o4VPDIAFBCGAHkkdye3IpdddTHoYJHFgDllekUABKAOyB9TyFq2cT+AGBzGfUGgFkeZBsFMLqgkuLv/1G/hz3qDwDVgtchnAOwBhoFAAK3+nfpo597AFlcG4CqOP9ZhZBrAFeWvgBcde6L/O93HvwEmGTPs1TMuJ8AbLPehbC5LwQVfO8ks5Zi2x1obGduPKjyIMMihg6UWXx5Ol4NUEKoLyeM8DfooBnmxcovBr8UwCTITYws/hEAZGMLGWxtbNmkWnlNgeguay0GRW71CSOk3QnZbgeFAAAAAElFTkSuQmCC"
+              alt="business">
+          </a>
+        </li>
+        <li>
+          <a href="#certificados">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2UlEQVR4nO2ZzW7TQBCAjRAgtbwDD4LEhQNXEAjxEFx5A+5IiCdAnHqxVdEoVSWchDQV4MY/u05bezeiarxbrpADqoQWjYlTp7Vj1z+pjTzSKIo32p1vZ3Zm45GkRhopXyhmzyjiQ4rZGcVclKvszF8LsaeFGE8Qf1G+0TxSxxZ/nh8A89F1AVDE7VzGO45zhyD2ZzbZb0/z1qSSxdO8NVgL1oS1wYbMk3GDrwe7QTCbSisSgtk0WBdsyDyR2BA3KWI//+0G/y7VDQBkjLxHBPP3BHn3pZB0FP3JJ1nnqmyIotVFbH4Ouopxqsr6Y6loGfbcKcWsqNQp9B6JATAFbFRmQzH+cXdsswcXD1N4kSLURSwWAJ4JIW5kAqCYa7Ms1Ao/hx1blQfUrAB+SpvnZPYrPFZG7KtFAyxLow2A3HggWZoQkit8iPXcaXQxdaqrBiiikLmh4hXWw+GJP+6YnlAVo34e6G8hMewSsduy589qVQfUCG0AyP/mAT3xDMTHeJLud11BLC6MPi0PIE0WissyiXXAOp+7o9TQA25zG51JcxeSK3wXUq9oVHfTEubuWDiGB69oxJEx8b9//oiqD7C3PfLvNVGHnVhM7G0fVBcAdj7OeBqkW9MTvU2rmgAQJsEcR/pEDNojP7cP2rb/PRiD31USIFyUwPjw2KA9OveCxaoJEA6VoKoG2lEWxysPAGGz6AG7XgCXzoAxqRdAkqpFAyzr0JQF0FVMv9D5m4Zy3kaz9sig2vZb+BJAUIkpYv6nGUqxUQp/7oONyAwAncKrAoAGV+moEEnroa87h/kBQKBnSxHfT9snhsrb38LZABATB9qJ+LKzeL3IBRAladtLF71ifzuG7qMfHmafJgKC5urQxAn0rdJAOGa6d0cuvMSKMb6UHllaIYi9S3lu3lybkcsEY3ybIP6KIL5BEXsLSWFss3vEPn1IMH9NEP9AMX+paeJWlgX+AiipuvnGQtp+AAAAAElFTkSuQmCC"
+              alt="certification">
+          </a>
+        </li>
+        <li>
+          <a href="#portifolio">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEnElEQVR4nO1YOY/bRhRW4tZBigRInwBJGyBu3OYHBEi65FekTmA3rlLkFySNU24hynt5fYlanburNTXkjE4O97CkoWwD6SIjgIEJHmmSQy1PkdIaiB7wIIGcmfd98455nEJhIxvZyP9XBoPpp5SwPw1svjaIyVMpNl9Twv7o9SafXAt4vsVvGMRspwa+oJSYJ7DW2glQbfp9VvCGQwKzH9ZOwCDmfQHEvSXm3xO88FdhncI5/5ASNnMBaOybtGvAHMPbgFew5mrQBhu/ldU45/wDihkTNuFWYV1CCbsjELifRxhSwu6sJFQMMvuJErYDu0UJe5tX4oZXJfb2na0dsL10aA212ecGNpVVAzbizwtlhF9+kR48YS+vHTzx8gwwJQ8bYecpMf+B+IQF1nHg8C1+A2yBTUrMueiJROEEcSeC17XZ7cI1ia7NboskKJn9GDvJTp58KoNx+vfHoFnWoITdFfBsx08QanNQ3Mlb5Ga52PlVlhAqS2guS4gvavvZkA+UibWGjhlv7HevjEmqtV38Rmg5zCSM3VK5GPNPiuhLWerQKINa6/xKEj6vjJYmUJFUscTyZyX1q0gComHxeb3U/ygO/PHTgQ/4SGWcHF/ww21taQKyhHxrWhi2yM3UBN6FTaShXvvSnas2zrgsqe67xsMeRw2Dtw66GQkgDlhSE5CLHTXOkK4xd+7hAw886Eid2jmhTjMTkIsdNb0HQhLWBxLZIEFru0RIROKFFcpOoCyheSgBir1dNAj7zdBmn1keSGAIH124c3unL3jzoGsp/Heew5ikwGs7mHeq9KoHJMShmw32AGb/ihPgIIEPjqNHPasiRBls7BFOcVRfw3jjoecZOVBV3nrUt6pZ0FqxBCgyv6XEHAQBGKKJlZxQbapBlaWkcuWQQr2+MheewTsYEwS8edDlavPMypGoviiWAAi8PCOz7yhmx1GLDZWxVSaVOrV+I3ffJWLyTo3yygMPfH0PWzU+aHy3/SI9AVHOyeRris3fR8g+WfNSrXnmhd6+l+ROoqO64Z7gmQg4AvEPblaqOu+2L0N3G1qI/vNxoA6UsW9sY9/Lh5MnA2ttsBFbRpchsLhopWTvHOSEW3nal7GVRWt549vlYaJq5OQFnDO5EXAUQDiASIISCWPSEmg97nHcOudHj/sJqhCe/kyxOYTfJATqe/74BYBQBsU2wimNIngIwfpeXEkN1wgCptW+wm8SAqBiGHnnB7PKLmhQhbF7JZQ/AdFIUgJQ24NIhCk0dX4PoUhVqvbZAqdyvAdCvgeSGIKQACPDDpRcX0tiPYN3acOmIqluxaNakpM45IssrYvBMPQyoHEtiByhtV0snA+TRB4Qv4nvLksgL1Wqulcgji+S5IDvVmLu3EpcB/jmQdfXV0EPFksg4F5oDp6Aj+ssoZBYS3bYwM6L4PunY+td7PeAdzNnvsqz98miujq1SAlEUSFO4D7yfbgb7Z+OF8HzsqT+Ektg4XZ6G+5kgvr8vJViu9pAwp48Hbph44IvIj3yViJKktwLrVLLRaQDhkIW8d/Mdd6sHLRk2UAQNkvv/EY2UgiV/wASShbrpSvLcwAAAABJRU5ErkJggg=="
+              alt="portfolio">
+          </a>
+        </li>
+        <li>
+          <a href="#contato">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAESklEQVR4nO1YTW8bRRi2QHyJMwdA4sAF9R+A1AOVeuUXAPfeegBxRBz5EahI7YlKrJ00CUlbeb2xYzuJ7Z3dGX+td+3Wyc4Yqb3AAQnSvuhdp/bsl9cfsd2DX+mVJXtm/Dzv90wqtZGNbGQjG9lIhADAGw5zv7YZf+CwwTOH8ZcOE7AKtRm/sCnnNhX3O1TcSM0qVo1/4DBRWBVgJ0kpv8MYe3sq8JUKvGVTXl47aBbyyi9TEbBNfmu8kf/nUPFTj/JrbXPwaZI6zP0E7sObqSsI3x7l12wm7sokOlR8mbjZYbw4Yk3FD6k1i83EvTEe/lviBofyv15t6Brnn8m/5ZTqF2qaZNS0/lxNE1i+GkAKzsgDlnH+r5qp3ZzMmIr2OHnEsy7l3+L3qkJuqWlysRrgBAq7DJrVfiAXOGQV/WVWIT/Ge8Dk39iUv5A3WsQt5nfoSsDn0gZUch2wzehkHq8jX8WTqA9u2ox3fVXA5FDJWksFn99l0Kg89VefAJHRekUvTwylfrH/nkP5z9hU5AMap30o7NIrB3+abXtGkv8LQ+horx5JAENJ/bX3bipJeo3B563aWcgqNc0GNWMsbvUdCvUTv9UdykHPj8+P9ECagPZ75cPUNIIHVTEuqYi00LzgTx63QlZvVc/g6A/mWxdH4GGm+lEIrCDifWwY+DkiIFWGRiVcGdBaua3pgR8+MIEdP4k+JxNePxMBh4r8ZQnNBwkM1YCKakGH+i3X1s+guN9IBH/8uAWWEbB6Da0e78mZCNh0OHXiZzSBCbHLBBhHXchthXPjcDvK6sJbryXk0mwekBZPIiBXj47pBrxxDuWHzeGaDMZ6GzqGG+Gx+lQht1QC8TEtoE3OQ8BRcTxIsrq6SgJyfEcBlj1TOvDniZYxvO67UgJYOtHiZrELuYAltW0TSN6GjlQeLcOF2mEHtC3Tt/bkUcur+b6QWyYBBIDut9kYHFp9Umihxv1OSz0fOFp+4iX7UggcP2p6lgzOR4Wd+ceK4n49dCYWBCzTmPxXQqCt9z9GywTjuXH6dCHwY68aQ68GuvywI9cXI2DTwW2H8r/l7yzieiPAosCjvNEKzFzYneULzcwEgmqWeqBtLz7AxWkuQ6Cqxd8F5ibQrJ5BcUKrX8a9oB7R5aci0JEfsLzw4d/h/LMq8KqkJxF9JZkAdf98tbh3+Sq2DvDqpR7t132dPZEAPueNkpiJu+smYBZ7vhycwgPihq8SMXEP7wFyXV66ZoZ3Dxk8aikwrkcS8BKZ8juTqtG8itXFa1ISiNJB0zd2xKlR7IaIxhLAh1R8i1wGCRyjJ40TTgz4iJvaxd6e9U4kATmcMCcs4v4T7JRzeYCGPVA+aIQ8gOswYTHmg2EzUkXXUtOKqpDr2bT+Yp3JrErqPakkPTEGJasYt18HElkEnybfzwTe5wlF317d4y6RVH/u/bdCrs8FfiMb2UjqtZT/AeENGOc4QK0ZAAAAAElFTkSuQmCC"
+              alt="secured-letter">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="sobre-mim">
+      <h3 class="titulo-sobre"> <strong> Olá e bem-vindo(a) ao meu universo digital! </strong> </h3>
+      <div class="sobre-mim">
+        <p class="sub-sobre">
+          Aqui você vai encontrar um pedacinho da minha jornada — projetos, ideias e muita paixão por transformar
+          código em experiências. <br>
+          Sou estudante de Engenharia de Software na Universidade Cruzeiro do Sul, com um olhar especial para o
+          front-end e uma quedinha por documentações bem feitas.
+          No momento, estou em busca de uma oportunidade de estágio onde eu possa aprender, crescer e, claro, colocar
+          a mão na massa!.</p>
+      </div>
+    </section>
+
+    <section id="Educacao">
+      <h2 class="titulo">Formação Acadêmica</h2>
+      <div class="educacao">
+        <p class="sub-educacao"> <strong> Universidade Cruzeiro do Sul - Em andamento </strong> <br> Engenharia de
+          Software (2023 - 2027)</p>
+        <p class="sub-educacao"> <strong> Colégio Estadual Euzébio da Mota </strong> <br> Ensino Médio (2018 - 2020)</p>
+      </div>
+    </section>
+
+    <section id="Historico de trabalho">
+      <h2 class="titulo">Experiência Profissional</h2>
+      <div class="historico-trabalho">
+        <p class="sub-historico"> <strong> Auxiliar de Escritorio (2022) <br> Colégio Erasto Gaertner </strong></p>
+        <li>
+          Atuei dando suporte administrativo e técnico, com foco na eficiência dos processos internos da empresa. Fui
+          responsável pela digitalização e organização de documentos, otimizando o fluxo de trabalho do setor. Também
+          ofereci suporte técnico básico, alimentei e mantive planilhas no Excel atualizadas e prestei atendimento
+          direto a clientes via e-mail e WhatsApp, solucionando dúvidas e problemas com agilidade. Além disso, conduzi
+          treinamentos para novos colaboradores, apresentando os sistemas e ferramentas utilizadas na empresa.
+        </li>
+      </div>
+    </section>
+
+    <section id="certificados">
+      <h2 class="titulo">Cursos</h2>
+      <div class="certificados">
+        <p class="sub-certificado"> <strong> FORMAÇÃO ALURA - </strong> A partir do zero: HTML e CSS para projetos web (2025) </p>
+        <p class="sub-certificado"> <strong> FORMAÇÃO ALURA - </strong> Aprenda a programar em JavaScript com foco no back-end (2025) </p>
+        <p class="sub-certificado"> <strong> FORMAÇÃO ALURA - </strong> Desenvolvimento Front-end: cursos para criar aplicações web com
+          HTML, CSS e JavaScript (2025) </p>
+        <p class="sub-certificado"> <strong> FORMAÇÃO ALURA - </strong> CSS avançado: implementando designs com Grid, Flexbox (2025) </p>
+        <p class="sub-certificado"> <strong> IMERSÃO ALURA - </strong> - Imersão Mobile (2025) </p>
+      </div>
+    </section>
+
+    <section id="portifolio">
+      <h2 class="titulo">Portifolio</h2>
+      <p class="sub-portifolio">Compilado dos meus melhores projetos</p>
+      <div class="card-container">
+        <a href="https://faculdadesalem.edu.br/" class="card" target="_blank">
+          <img src="imagens\projeto1.png" alt="Projeto 1">
+          <div class="card-content">
+            <h3>Site Institucional – Faculdade Salem</h3>
+            <p>Desenvolvimento da interface do site institucional da Faculdade Salem, com foco em performance,
+              responsividade e usabilidade. Utilizei HTML, CSS, JavaScript e integração com frameworks modernos para
+              estruturar um layout limpo, acessível e adaptado a dispositivos móveis. O projeto foi alinhado à
+              identidade visual da instituição e otimizado para navegação clara e objetiva.</p>
+          </div>
+        </a>
+
+        <a href="https://educacao-ambiental.vercel.app/" class="card" target="_blank">
+          <img src="imagens\projeto2.jpg" alt="Projeto 2">
+          <div class="card-content">
+            <h3>Landing Page – Educação Ambiental (Front-End)</h3>
+            <p>Criação de uma landing page interativa e responsiva com foco em conscientização ambiental. Desenvolvida
+              com HTML, CSS e JavaScript, a interface foi pensada para proporcionar uma experiência visual leve e
+              educativa, com ilustrações, cores suaves e navegação fluida. O layout adapta-se perfeitamente a diferentes
+              dispositivos, reforçando o impacto visual e a clareza das informações.</p>
+          </div>
+        </a>
+        
+    </section>
+    <section id="contato">
+      <h2 class="titulo">Contato</h2>
+
+      <div class="contato">
+        <p class="sub-contato">Entre em contato por e-mail ou WhatsApp clicando nos botões abaixo:</p>
+
+        <div class="botoes-contato">
+          <a href="https://mail.google.com/mail/?view=cm&to=ma.milecris@gmail.com" class="botao-contato"
+            target="_blank">
+            Enviar E-mail
+          </a>
+
+          <a href="https://wa.me/5541992571584" class="botao-contato" target="_blank">
+            Enviar WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+</body>
+
+</html>
