@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fundo);
+  height: 100%;
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quicksand-semi-bold {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: bold;
+}
+
+p,
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primaria: #bfafd0;
+  --secundaria: #f3d6d3;
+  --destaque: #d4b6ca;
+  --fundo: #ddd4e7;
+  --texto: #333;
+}
+
+header {
+  max-width: 20rem;
+  height: 280vh;
+  background-color: #bfafd0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+}
+
+.img-perfil {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  margin: 20% auto 10% auto;
+  display: block;
+}
+
+.texto-perfil {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.sub-perfil {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.lista-redes-sociais {
+  margin: 15% auto 1% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.titulo-sobre {
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.sub-sobre {
+  text-align: center;
+  font-size: 1em;
+}
+
+.linguagens {
+  font-size: 1em;
+  margin: 0.5rem auto;
+  max-width: 400px;
+}
+
+.titulo-ling {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.linha-barra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.idioma,
+.porcentagem {
+  text-align: center;
+  width: 80px;
+  font-size: 0.9em;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.progresso {
+  flex: 1;
+  min-width: 80px;
+  background-color: var(--fundo);
+  border-radius: 10px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.nivel {
+  height: 100%;
+  background-color: var(--destaque);
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 10px 0 0 10px;
+}
+
+.titulo-hab {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.hab {
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.curriculo {
+  text-align: center;
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 2rem auto;
+  background-color: var(--secundaria);
+  /* cor de fundo */
+  color: var(--texto);
+  /* cor do texto */
+  border: none;
+  padding: 12px 24px;
+  /* mais espaço interno */
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  /* cantos mais arredondados */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* sombra suave */
+  transition: all 0.3s ease;
+  /* transição suave no hover */
+}
+
+button:hover {
+  background-color: #ffffff;
+  /* cor ao passar o mouse */
+  color: var(--secundaria);
+  /* inverte as cores */
+  transform: scale(1.05);
+  /* leve aumento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* sombra mais intensa */
+}
+
+a {
+  text-decoration: none;
+  /* remove o sublinhado */
+  color: var(--texto);
+  /* cor do texto */
+}
+
+.navegacao {
+  width: 6%;
+  height: 100vh;
+  background-color: var(--primaria);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.menu {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  /* centraliza o texto */
+  text-align: center;
+  /* centraliza o texto dentro do bloco */
+  font-size: 1.2em;
+}
+
+.menu-lista {
+  list-style: none;
+  margin-bottom: 50%;
+}
+
+main {
+  flex: 1;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 6%;
+}
+
+
+section {
+  margin: 2rem 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo{
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.sub-educacao{
+  text-align: center;
+  font-size: 1em;
+  margin: 0.8rem;
+} 
+
+li{
+  margin: 0.5rem;
+  font-size: 1em;
+  font-family: poppins;
+}
+
+.sub-historico{
+  text-align: center;
+  font-size: 1em;
+  margin: 0.8rem;
+}
+
+.sub-portifolio{
+  text-align: center;
+  font-size: 1em;
+  margin: 0.8rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.contato {
+  text-align: center;
+  padding: 2rem;
+}
+
+.sub-contato {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--texto);
+}
+
+.botoes-contato {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.botao-contato {
+  background-color: var(--primaria);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botao-contato:hover {
+  background-color: var(--secundaria);
+}
+
+
+
+
