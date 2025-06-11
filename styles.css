@@ -199,7 +199,6 @@ header {
   }
 }
 
-
 .titulo-sobre {
   margin: 0.5rem auto;
   text-align: center;
@@ -231,12 +230,11 @@ ul {
 
 .linguagens {
   font-size: 1em;
-  margin: 0.5rem auto;
   max-width: 400px;
+  margin: 0.5rem;
 }
 
 .titulo-ling {
-  margin: 1rem auto;
   text-align: center;
   font-size: 1.2em;
   /* Pequeno reforço visual */
@@ -331,9 +329,8 @@ ul {
   }
 }
 
-
 .titulo-hab {
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   text-align: center;
   font-size: 1.2em;
 }
@@ -342,6 +339,7 @@ ul {
   width: 100px;
   font-weight: bold;
   text-align: center;
+  margin-left: 0.5rem;
 }
 
 .curriculo {
