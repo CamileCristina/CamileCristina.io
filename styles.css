@@ -4,14 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Corrigido: garante que o body se comporta bem em layouts responsivos */
 body {
   background-color: var(--fundo);
   height: 100%;
   display: flex;
-}
-
-html {
-  scroll-behavior: smooth;
+  flex-direction: row;
+  /* mantém em desktop */
+  width: 100%;
 }
 
 .poppins-regular {
@@ -35,7 +39,8 @@ h5,
 h6 {
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
-  font-style: bold;
+  /* Corrigido: "bold" não é um valor válido para font-style */
+  font-style: normal;
 }
 
 p,
@@ -53,23 +58,72 @@ span {
   --texto: #333;
 }
 
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    width: 100%;
+    /* garante que ocupe a largura da tela */
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 90%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  p,
+  span {
+    font-size: 95%;
+    padding: 0 1rem;
+    line-height: 1.4;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .col {
+    width: 100%;
+    display: block;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}
+
 header {
   max-width: 20rem;
-  height: 280vh;
+  height: auto;
   background-color: #bfafd0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
-
 }
 
 .img-perfil {
   width: 70%;
+  max-width: 200px;
+  /* limita no desktop */
   height: auto;
-  border-radius: 50%;
-  margin: 20% auto 10% auto;
+  border-radius: 0;
+  margin: 2rem auto 1rem auto;
   display: block;
 }
 
@@ -96,9 +150,55 @@ header {
   justify-content: center;
 }
 
-ul {
-  list-style: none;
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    box-sizing: border-box;
+  }
+
+  .img-perfil {
+    width: 80%;
+    max-width: 180px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .texto-perfil,
+  .sub-perfil {
+    width: 100%;
+    margin: 0.5rem auto;
+    text-align: center;
+    white-space: normal;
+    /* deixa o texto quebrar normalmente */
+  }
+
+  .texto-perfil {
+    font-size: 1.3em;
+  }
+
+  .sub-perfil {
+    font-size: 1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .lista-redes-sociais {
+    width: auto;
+    /* permite ajustar ao conteúdo */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* evita quebra dos ícones */
+    gap: 1rem;
+    margin: 1rem auto;
+  }
 }
+
 
 .titulo-sobre {
   margin: 0.5rem auto;
@@ -111,6 +211,24 @@ ul {
   font-size: 1em;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  /* Garante que não haja recuo inesperado em desktop */
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  ul {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    /* Ajuda a separar visualmente no mobile */
+  }
+
+}
+
 .linguagens {
   font-size: 1em;
   margin: 0.5rem auto;
@@ -120,6 +238,8 @@ ul {
 .titulo-ling {
   margin: 1rem auto;
   text-align: center;
+  font-size: 1.2em;
+  /* Pequeno reforço visual */
 }
 
 .linha-barra {
@@ -156,9 +276,66 @@ ul {
   border-radius: 10px 0 0 10px;
 }
 
+@media (max-width: 768px) {
+  .linguagens {
+    font-size: 0.95em;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+
+  .titulo-ling {
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .linha-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    /* espaço interno lateral opcional */
+    flex-wrap: nowrap;
+    /* impede quebra */
+  }
+
+  .idioma {
+    width: 80px;
+    min-width: 60px;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .progresso {
+    flex-grow: 1;
+    height: 20px;
+    background-color: var(--fundo);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0.5rem;
+  }
+
+  .nivel {
+    height: 100%;
+    background-color: var(--destaque);
+    width: 80%;
+    /* ou ajuste via JS/inline */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+  }
+}
+
+
 .titulo-hab {
   margin: 1rem auto;
   text-align: center;
+  font-size: 1.2em;
 }
 
 .hab {
@@ -170,47 +347,81 @@ ul {
 .curriculo {
   text-align: center;
   display: flex;
-  flex-direction: flex-start;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 button {
   margin: 2rem auto;
   background-color: var(--secundaria);
-  /* cor de fundo */
   color: var(--texto);
-  /* cor do texto */
   border: none;
   padding: 12px 24px;
-  /* mais espaço interno */
   font-size: 1em;
   font-weight: bold;
   border-radius: 8px;
-  /* cantos mais arredondados */
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* sombra suave */
   transition: all 0.3s ease;
-  /* transição suave no hover */
 }
 
 button:hover {
   background-color: #ffffff;
-  /* cor ao passar o mouse */
   color: var(--secundaria);
-  /* inverte as cores */
   transform: scale(1.05);
-  /* leve aumento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  /* sombra mais intensa */
 }
 
 a {
   text-decoration: none;
-  /* remove o sublinhado */
   color: var(--texto);
-  /* cor do texto */
+}
+
+@media (max-width: 768px) {
+  .titulo-hab {
+    font-size: 1.1em;
+    padding: 0 1rem;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    font-weight: 600;
+    max-width: 400px;
+  }
+
+  .hab {
+    max-width: 400px;
+    font-size: 0.9em;
+    margin: 0.5rem auto 1.5rem auto;
+    text-align: center;
+    line-height: 1.4;
+    /* quebra de linha permitida - sem white-space: nowrap */
+  }
+
+  .curriculo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  button {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 0.95em;
+    /* igual ao .linguagens */
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+  }
 }
 
 .navegacao {
@@ -243,6 +454,59 @@ a {
   margin-bottom: 50%;
 }
 
+@media (max-width: 768px) {
+  .navegacao {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 48px;
+    /* altura menor da barra */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 0.5rem;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-lista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* um pouco menos de espaço */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu-lista li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Se seus ícones forem imagens ou SVGs */
+  .menu-lista li img,
+  .menu-lista li svg {
+    width: 24px;
+    /* largura menor */
+    height: 24px;
+    /* altura menor */
+  }
+
+  /* Se usar ícones de fonte (FontAwesome, Material Icons, etc) */
+  .menu-lista li {
+    font-size: 24px;
+    /* reduz o tamanho da fonte dos ícones */
+  }
+}
+
+
 main {
   flex: 1;
   min-height: 100vh;
@@ -261,35 +525,72 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.titulo{
+.titulo {
   margin: 0.5rem auto;
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.sub-educacao{
+.sub-educacao {
   text-align: center;
   font-size: 1em;
   margin: 0.8rem;
-} 
+}
 
-li{
+li {
   margin: 0.5rem;
   font-size: 1em;
   font-family: poppins;
 }
 
-.sub-historico{
+.sub-historico {
   text-align: center;
   font-size: 1em;
   margin: 0.8rem;
 }
 
-.sub-portifolio{
+.sub-portifolio {
   text-align: center;
   font-size: 1em;
   margin: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-right: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  section {
+    margin: 1rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .titulo {
+    font-size: 1.2em;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sub-educacao,
+  .sub-historico,
+  .sub-portifolio {
+    font-size: 0.95em;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  li {
+    font-size: 0.95em;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
 }
 
 .card-container {
@@ -368,6 +669,48 @@ li{
   background-color: var(--secundaria);
 }
 
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
+  .card {
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
 
+  .card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
 
+  .card-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .contato {
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .sub-contato {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .botao-contato {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    margin: 0 auto;
+    display: block;
+  }
+}
